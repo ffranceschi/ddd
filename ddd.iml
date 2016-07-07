@@ -42,7 +42,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -54,6 +54,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="TEST" name="Arquillian JUnit:Release" level="project" />
+    <orderEntry type="library" name="Primefaces" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.spec:jboss-javaee-7.0:1.0.3.Final" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1.1" level="project" />
     <orderEntry type="library" name="Maven: javax.enterprise:cdi-api:1.2" level="project" />
@@ -87,6 +88,7 @@
     <orderEntry type="library" name="Maven: org.jboss.spec.javax.xml.ws:jboss-jaxws-api_2.2_spec:2.0.2.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.postgresql:postgresql:9.4.1208" level="project" />
     <orderEntry type="library" name="Maven: org.primefaces:primefaces:5.3" level="project" />
-    <orderEntry type="library" name="Primefaces" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:18.0" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains:annotations-java5:15.0" level="project" />
   </component>
 </module>
