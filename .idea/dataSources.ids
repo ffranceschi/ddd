@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="PostgreSQL - teste@localhost" uuid="c1f7cb78-180b-4e24-9fe1-3732c465e1e7">
+    <database-info product="PostgreSQL" version="9.5.2" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.5">
+      <database id="1" name="teste"/>
+      <schema id="2" parent="1" name="t1">
+        <object-id>46222</object-id>
+        <introspection-state-number>897177</introspection-state-number>
+        <introspection-timestamp>2016-07-06.23:44:43.647</introspection-timestamp>
+      </schema>
+      <sequence id="3" parent="2" name="pedido_id_seq">
+        <object-id>46319</object-id>
+        <state-number>897171</state-number>
+      </sequence>
+      <sequence id="4" parent="2" name="pedido_item_id_seq">
+        <object-id>46322</object-id>
+        <state-number>897173</state-number>
+      </sequence>
+      <table id="5" parent="2" name="pedido">
+        <object-id>46308</object-id>
+        <state-number>897177</state-number>
+      </table>
+      <table id="6" parent="2" name="pedido_item">
+        <object-id>46311</object-id>
+        <state-number>897177</state-number>
+      </table>
+      <column id="7" parent="5" name="id_pedido">
+        <state-number>897172</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+        <default-expression>nextval(&apos;t1.pedido_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="8" parent="5" name="de_pedido">
+        <state-number>897164</state-number>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <index id="9" parent="5" name="pk_pedido">
+        <object-id>46325</object-id>
+        <columns>id_pedido</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="10" parent="5" name="pk_pedido">
+        <columns>id_pedido</columns>
+        <underlying-index>pk_pedido</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="11" parent="6" name="id_pedido_item">
+        <state-number>897174</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+        <default-expression>nextval(&apos;t1.pedido_item_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="12" parent="6" name="id_pedido">
+        <state-number>897166</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="13" parent="6" name="nr_quantidade">
+        <state-number>897168</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="14" parent="6" name="vl_produto">
+        <state-number>897169</state-number>
+        <data-type>numeric</data-type>
+      </column>
+      <index id="15" parent="6" name="pk_pedido_item">
+        <object-id>46327</object-id>
+        <columns>id_pedido_item</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="16" parent="6" name="pk_pedido_item">
+        <columns>id_pedido_item</columns>
+        <underlying-index>pk_pedido_item</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="17" parent="6" name="pedido_item_id_pedido_fkey">
+        <columns>id_pedido</columns>
+        <ref-key>~.pedido.pk_pedido</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+</component>
