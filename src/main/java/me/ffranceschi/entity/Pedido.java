@@ -1,9 +1,6 @@
 package me.ffranceschi.entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by fernando on 7/6/16.
@@ -11,12 +8,15 @@ import javax.persistence.Id;
 @Entity
 public class Pedido {
 
-
+    @Id
+    @GeneratedValue
+    @Column(name = "id_pedido")
     private Integer idPedido;
+
+    @Basic
+    @Column(name = "de_pedido")
     private String dePedido;
 
-    @Id
-    @Column(name = "id_pedido")
     public Integer getIdPedido() {
         return idPedido;
     }
@@ -25,8 +25,6 @@ public class Pedido {
         this.idPedido = idPedido;
     }
 
-    @Basic
-    @Column(name = "de_pedido")
     public String getDePedido() {
         return dePedido;
     }
